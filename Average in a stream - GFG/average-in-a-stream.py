@@ -1,0 +1,29 @@
+#User function Template for python3
+
+class Solution:
+	def streamAvg(self, arr, n):
+	    num = 0
+	    newlist = [0]*n
+		for i in range(0,n):
+		    num = num + arr[i]
+		    newlist[i] = num/(i+1) 
+
+        return newlist
+
+#{ 
+ # Driver Code Starts
+#Initial template for Python
+
+if __name__ == '__main__':
+    tc = int(input())
+    while tc > 0:
+        n = int(input())
+        arr = list(map(int, input().strip().split()))
+        ob = Solution()
+        ans = ob.streamAvg(arr, n)
+        for x in ans:
+            print('%.2f'%x, end=" ")
+        print()
+        tc -= 1
+
+# } Driver Code Ends
